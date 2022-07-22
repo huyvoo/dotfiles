@@ -41,6 +41,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/tagbar'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug  'vim-ruby/vim-ruby'
+    if has('nvim')
+        Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'Shougo/denite.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
 call plug#end()
 
 " }}}
