@@ -1,3 +1,6 @@
+inoremap jj <ESC>
+
+
 syntax on
 set tabstop=4
 set softtabstop=4
@@ -7,6 +10,12 @@ set ignorecase
 set number
 set smartcase
 set mouse=a
+
+" Set copy and paste
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " Focus the panel when opening it
 let g:tagbar_autofocus = 1
@@ -32,6 +41,8 @@ let NERDTreeWinSize = 31        " Set panel width to 31 columns
 nmap <F2> :NERDTreeToggle<CR>
 
 call plug#begin('~/.vim/plugged')
+    " Plug 'puremourning/vimspector'
+    Plug 'voldikss/vim-floaterm'
     Plug 'morhetz/gruvbox'
     Plug 'dense-analysis/ale'
     Plug 'sheerun/vim-polyglot'
